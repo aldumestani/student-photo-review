@@ -6,15 +6,24 @@
 """
 
 import os, sys, json, shutil, threading, socket
-from flask import Flask, render_template_string, send_from_directory, request, jsonify
+import requests
+from flask import Flask, render_template_string, send_from_directory, request, jsonify, Response
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STUDENTS_JSON = os.path.join(BASE_DIR, 'students_data.json')
 HQ_TO_STUDENT = os.path.join(BASE_DIR, 'hq_to_student.json')
 MATCHES_FILE = os.path.join(BASE_DIR, 'teacher_matches.json')
 THUMBS_DIR = os.path.join(BASE_DIR, 'static', 'thumbs')
+DRIVE_JSON = os.path.join(BASE_DIR, 'drive_images.json')
 FINAL_DIR = os.path.join(BASE_DIR, 'النتيجة النهائية')
 LOCAL_HQ_DIR = r'C:\Users\Jehad\Downloads\OpenCode Projects\امنيات الطلبة\الصور النهائية للطباعة'
+
+# Load Google Drive image mapping (if available)
+drive_images = {}
+if os.path.exists(DRIVE_JSON):
+    with open(DRIVE_JSON, 'r', encoding='utf-8') as f:
+        drive_data = json.load(f)
+        drive_images = drive_data.get('files', {})
 
 app = Flask(__name__)
 
@@ -68,13 +77,29 @@ def index():
         total_hq=len(hq_photos),
     )
 
+def serve_image(name):
+    # Try Google Drive first
+    if name in drive_images:
+        file_id = drive_images[name]
+        url = f'https://drive.google.com/uc?export=view&id={file_id}'
+        try:
+            r = requests.get(url, timeout=10)
+            if r.status_code == 200:
+                return Response(r.content, mimetype=r.headers.get('Content-Type', 'image/jpeg'))
+        except:
+            pass
+    # Fallback to local
+    if os.path.exists(os.path.join(THUMBS_DIR, name)):
+        return send_from_directory(THUMBS_DIR, name)
+    return '', 404
+
 @app.route('/thumb/<name>')
 def thumb(name):
-    return send_from_directory(THUMBS_DIR, name)
+    return serve_image(name)
 
 @app.route('/full/<name>')
 def full(name):
-    return send_from_directory(THUMBS_DIR, name)
+    return serve_image(name)
 
 @app.route('/hq_img/<name>')
 def hq_img(name):
