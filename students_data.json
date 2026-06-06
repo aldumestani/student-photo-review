@@ -1,0 +1,744 @@
+[
+  {
+    "url_fn": "IMG_7592_Mohamed Moosa Jaafar.jpeg",
+    "safe_name": "stu_0.jpeg",
+    "class": "سادس1",
+    "arabic_name": "محمد موسى جعفر جمعه",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦-٠٥-٣٠-٢٠-٠٧-٠٩-٩٨٨_com.whatsa_Ahmed Fadhel Ahmed H.jpg",
+    "safe_name": "stu_1.jpg",
+    "class": "سادس4",
+    "arabic_name": "أحمد فاضل احمد حسين",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG_20260530_200728_Jaffar Yunis Saeed A.jpg",
+    "safe_name": "stu_2.jpg",
+    "class": "سادس4",
+    "arabic_name": "جعفر يونس سعيد المعلم",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "431F109F-FE40-4FC3-BCF7-BC6C0C8D564D_Ali Husain Salman Me.mp4",
+    "safe_name": "stu_3.mp4",
+    "class": "سادس5",
+    "arabic_name": "علي حسين سلمان مشيمع",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "Adam_photo_Adam Ismael Ahmed Al.png",
+    "safe_name": "stu_4.png",
+    "class": "سادس1",
+    "arabic_name": "آدم اسماعيل احمد المحاري",
+    "profession": "مهندس كمبيوتر"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥١٩_١٠٥٩٠٣_WhatsApp_Ali Adel Ali Almusej.jpg",
+    "safe_name": "stu_5.jpg",
+    "class": "سادس5",
+    "arabic_name": "علي عادل علي المسجن",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "IMG_8728_Hasan Ebrahim Khalif.jpeg",
+    "safe_name": "stu_6.jpeg",
+    "class": "سادس1",
+    "arabic_name": "حسن ابراهيم خليفه المقابي",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣٠_٢٠١٩٤٣_WhatsApp_Ali Adel Ali Almusej.jpg",
+    "safe_name": "stu_7.jpg",
+    "class": "سادس5",
+    "arabic_name": "علي عادل علي المسجن",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "IMG_٢٠٢٦٠٥٣٠_٢٠١٦٥٢_Mahdi Mahmood Abdull.jpg",
+    "safe_name": "stu_8.jpg",
+    "class": "سادس3",
+    "arabic_name": "مهدي محمود عبدالله الزاكي",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG_5761_Monther Isa Ebrahim.jpeg",
+    "safe_name": "stu_9.jpeg",
+    "class": "سادس5",
+    "arabic_name": "منذر عيسى ابراهيم العقف",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "7ad63415-3207-4ad8-bb03-6a49cd6677e5_Adam Ayman Isa Abdul.jpeg",
+    "safe_name": "stu_10.jpeg",
+    "class": "سادس1",
+    "arabic_name": "آدم ايمن عيسى عبدالكريم",
+    "profession": "مهندس كهربائي"
+  },
+  {
+    "url_fn": "7b850ad1-dbe9-4d97-97ab-d5113078a72d_Ali Jameel Isa Alkha.jpeg",
+    "safe_name": "stu_11.jpeg",
+    "class": "سادس5",
+    "arabic_name": "علي جميل عيسى الخباز",
+    "profession": "شرطي"
+  },
+  {
+    "url_fn": "7b850ad1-dbe9-4d97-97ab-d5113078a72d_Ali Jameel Isa Alkha 1.jpeg",
+    "safe_name": "stu_12.jpeg",
+    "class": "سادس5",
+    "arabic_name": "علي جميل عيسى الخباز",
+    "profession": "شرطي"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٣-١٢-١٠-٢١-٥٢-٢٤-٦٣_965bbf4d18d_Mohamed Hasan Ahmed.jpg",
+    "safe_name": "stu_13.jpg",
+    "class": "سادس2",
+    "arabic_name": "محمد حسن احمد احمد",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "247359_Abbas Ali Abdulla Ja.jpeg",
+    "safe_name": "stu_14.jpeg",
+    "class": "سادس5",
+    "arabic_name": "عباس علي عبدالله جاسم",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "9bb21939-b1ef-452a-8dae-375ef389029d_Ridha Abbas Ali Alsa.jpeg",
+    "safe_name": "stu_15.jpeg",
+    "class": "سادس3",
+    "arabic_name": "رضا عباس علي الصائغ",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣٠_٢٠٣٩٢٨_Gallery_Fadhel Abbas Ali Alr.jpg",
+    "safe_name": "stu_16.jpg",
+    "class": "سادس3",
+    "arabic_name": "فاضل عباس علي الرحيم",
+    "profession": "برمجة حاسوب"
+  },
+  {
+    "url_fn": "f00399ec-e421-46a5-ac69-fac5653bf1cb_Khalil Ali Khalil Eb.jpeg",
+    "safe_name": "stu_17.jpeg",
+    "class": "سادس1",
+    "arabic_name": "خليل علي خليل ابراهيم",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣٠-٢٠٤٢٤٩_Gallery_Sayed Ali Husain Ala.jpg",
+    "safe_name": "stu_18.jpg",
+    "class": "سادس4",
+    "arabic_name": "السيد علي حسين علوي شرف",
+    "profession": "محاسب في بنك"
+  },
+  {
+    "url_fn": "3f283da9-50a4-41ab-95c2-fb91df043ef2_Murtadha Ammar Ebrah.jpeg",
+    "safe_name": "stu_19.jpeg",
+    "class": "سادس4",
+    "arabic_name": "مرتضى عمار ابراهيم الاسود",
+    "profession": "مدير اعمال"
+  },
+  {
+    "url_fn": "90d498f9-89cb-4a75-9783-4b7c6f908f13_Ammar Kameel Salman.jpeg",
+    "safe_name": "stu_20.jpeg",
+    "class": "سادس1",
+    "arabic_name": "عمار كميل سلمان مرهون",
+    "profession": "رجل أمن"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0023_Ahmed Ali Ebrahim Mo.jpg",
+    "safe_name": "stu_21.jpg",
+    "class": "سادس4",
+    "arabic_name": "أحمد علي ابراهيم محسن",
+    "profession": "مهندس ديكور"
+  },
+  {
+    "url_fn": "3fe0439d-1976-4cf8-bd35-4b713cc91f77_Ahmed Ebrahim Jaffar.jpeg",
+    "safe_name": "stu_22.jpeg",
+    "class": "سادس2",
+    "arabic_name": "أحمد ابراهيم جعفر عيسى",
+    "profession": "معلم لغة انجليزية"
+  },
+  {
+    "url_fn": "91148382-092f-4047-a905-4ce620b42039_SAYED HASAN AHMED M..jpeg",
+    "safe_name": "stu_23.jpeg",
+    "class": "سادس1",
+    "arabic_name": "السيد حسن احمد محمد الكامل",
+    "profession": "معلم تربية رياضية"
+  },
+  {
+    "url_fn": "IMG_6404_Ali Radhi Ali Ammar.jpeg",
+    "safe_name": "stu_24.jpeg",
+    "class": "سادس3",
+    "arabic_name": "علي رضي علي عمار",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0026_Sayed Mujtaba Sadeq.jpg",
+    "safe_name": "stu_25.jpg",
+    "class": "سادس3",
+    "arabic_name": "السيد مجتبى صادق محمد جعفر شبر",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣٠_٢١١٥٠٧_WhatsApp_Zainab Mahdi Sayed J.jpg",
+    "safe_name": "stu_26.jpg",
+    "class": "سادس5",
+    "arabic_name": "سيد مجتبى مهدي جعفر النجار",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "Photoroom_20260530_211440_Ahmed Husain Hasan A.jpeg",
+    "safe_name": "stu_27.jpeg",
+    "class": "سادس2",
+    "arabic_name": "احمد حسين حسن علي",
+    "profession": "مالك معرض سيارات"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0013_Suad Salman Abdulhus.jpg",
+    "safe_name": "stu_28.jpg",
+    "class": "سادس4",
+    "arabic_name": "حسين سلمان عبدالحسين العصفور",
+    "profession": "لاعب كرة قدم في منتخب البحرين"
+  },
+  {
+    "url_fn": "IMG_20260415_184716_091_Ameer Yunes Abdulnab.jpg",
+    "safe_name": "stu_29.jpg",
+    "class": "سادس5",
+    "arabic_name": "أمير يونس عبدالنبي عيد",
+    "profession": "مهندس الكترونيات"
+  },
+  {
+    "url_fn": "IMG-20240804-WA2616_Mohamed Ali Hasan Ju.jpg",
+    "safe_name": "stu_30.jpg",
+    "class": "سادس2",
+    "arabic_name": "محمد علي حسن جمعه",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "Snapchat-1636819107_RUQAYA ALI HASAN ABD.jpg",
+    "safe_name": "stu_31.jpg",
+    "class": "سادس2",
+    "arabic_name": "سلمان علي حسن عبدالرسول",
+    "profession": "لاعب كرة قدم"
+  },
+  {
+    "url_fn": "file_000000003108720ab1c15d57a4cc0030_Redha Hasan Khalil F.png",
+    "safe_name": "stu_32.png",
+    "class": "سادس5",
+    "arabic_name": "رضا حسن خليل فخر",
+    "profession": "لاعب كرة قدم ومدرب رياضي"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0038_Muntadar Mahdi Abbas.jpg",
+    "safe_name": "stu_33.jpg",
+    "class": "سادس3",
+    "arabic_name": "منتظر مهدي عباس الموالي",
+    "profession": "مهندس حاسب آلي"
+  },
+  {
+    "url_fn": "IMG_20260530_223558_Husain Ali Abbas Moo.jpg",
+    "safe_name": "stu_34.jpg",
+    "class": "سادس4",
+    "arabic_name": "حسين علي عباس موسى",
+    "profession": "مدرس"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣٠_٢٢٣٣٣٨_Gallery_Fadhel Abbas Ali Alr.jpg",
+    "safe_name": "stu_35.jpg",
+    "class": "سادس3",
+    "arabic_name": "فاضل عباس علي الرحيم",
+    "profession": "برمجة حاسوب"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0027_MARIAM EBRAHIM M. EB.jpg",
+    "safe_name": "stu_36.jpg",
+    "class": "سادس2",
+    "arabic_name": "محمد ابراهيم محمد ابراهيم",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "06e192e8-2f6e-4945-a322-d14a1046f93c_Haider Fadhel Abbas.jpeg",
+    "safe_name": "stu_37.jpeg",
+    "class": "سادس1",
+    "arabic_name": "حيدر فاضل عباس محمد",
+    "profession": "أتمنى ان أصبح رجل أعمال"
+  },
+  {
+    "url_fn": "3x4_Hadi Husain A.Rasool.jpeg",
+    "safe_name": "stu_38.jpeg",
+    "class": "سادس1",
+    "arabic_name": "هادي حسين عبدالرسول درويش",
+    "profession": "مهندس حاسوب"
+  },
+  {
+    "url_fn": "IMG_20260415_184716_091_Ameer Yunes Abdulnab 1.jpg",
+    "safe_name": "stu_39.jpg",
+    "class": "سادس5",
+    "arabic_name": "أمير يونس عبدالنبي عيد",
+    "profession": "مهندس إلكترونيات خصوصا الهواتف الذكية"
+  },
+  {
+    "url_fn": "tmp_6b51b7db-a174-4617-b2cb-6992b45a896e_Qasim Abdulshaheed A.jpeg",
+    "safe_name": "stu_40.jpeg",
+    "class": "سادس1",
+    "arabic_name": "قاسم عبدالشهيد عبدالله عبدعلي",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "dbebb776-3772-4799-b1b4-e99a0be6ccb7_Mohammed Sadeq Saeed.jpeg",
+    "safe_name": "stu_41.jpeg",
+    "class": "سادس4",
+    "arabic_name": "محمد صادق سعيد العسكري",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "b5d6c362-96f3-4fe1-bc67-314af2a41229_Murtadha Ammar Ebrah.jpeg",
+    "safe_name": "stu_42.jpeg",
+    "class": "سادس4",
+    "arabic_name": "مرتضى عمار ابراهيم الاسود",
+    "profession": "رجل اعمال"
+  },
+  {
+    "url_fn": "IMG_0905_Sayed Abbas Husain A.jpeg",
+    "safe_name": "stu_43.jpeg",
+    "class": "سادس4",
+    "arabic_name": "سيد عباس حسين عباس علوي",
+    "profession": "مهندس كهربائي"
+  },
+  {
+    "url_fn": "IMG_5026_Sayed Mohamed Majed.jpg",
+    "safe_name": "stu_44.jpg",
+    "class": "سادس1",
+    "arabic_name": "السيد محمد ماجد عيسى شبر",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "c3f2feb5-a980-4685-abc2-cfd2cdb8eb50_Sayed Hood Ali Saeed.jpeg",
+    "safe_name": "stu_45.jpeg",
+    "class": "سادس2",
+    "arabic_name": "السيد هود علي سعيد هاشم",
+    "profession": "طيار مدني"
+  },
+  {
+    "url_fn": "IMG-20220327-WA0025(1)_MAJEED ABDULSHAHEED.jpg",
+    "safe_name": "stu_46.jpg",
+    "class": "سادس5",
+    "arabic_name": "رضا مجيد عبدالشهيد حسن",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "محمد الذهبة _ سادس 3_ مهندس_Mohamed Ahmed Mohame.jpg",
+    "safe_name": "stu_47.jpg",
+    "class": "سادس3",
+    "arabic_name": "محمد احمد محمد الذهبه",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "17802005048321729111561201111941_Husain Mahdi Kadhem.jpg",
+    "safe_name": "stu_48.jpg",
+    "class": "سادس2",
+    "arabic_name": "حسين مهدي كاظم كاظم",
+    "profession": "طبيب اسنان"
+  },
+  {
+    "url_fn": "cpr_Sayed Adam Hadi Jawa.jpg",
+    "safe_name": "stu_49.jpg",
+    "class": "سادس2",
+    "arabic_name": "السيد آدم هادي جواد شرف",
+    "profession": "مدرّب كرة قدم"
+  },
+  {
+    "url_fn": "IMG_4715_Adam Husain Jameel A.jpeg",
+    "safe_name": "stu_50.jpeg",
+    "class": "سادس5",
+    "arabic_name": "آدم حسين جميل العصفور",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "DSC_0011 copy_Karrar Husain Ahmed.jpeg",
+    "safe_name": "stu_51.jpeg",
+    "class": "سادس5",
+    "arabic_name": "كرار حسين احمد العجيمي",
+    "profession": "معلم رياضيات"
+  },
+  {
+    "url_fn": "IMG_7871_Fatema Saeed Ebrahim.jpeg",
+    "safe_name": "stu_52.jpeg",
+    "class": "سادس2",
+    "arabic_name": "أحمد محمد جواد محمد",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "Image to PDF 20260531 12.45.29_Fatima Sayed Abbas N.pdf",
+    "safe_name": "stu_53.pdf",
+    "class": "سادس1",
+    "arabic_name": "السيد نور عباس نور محمد",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG-20260427-WA0020_Karrar Husain Ahmed.jpg",
+    "safe_name": "stu_54.jpg",
+    "class": "سادس1",
+    "arabic_name": "كرار حسين احمد احمد",
+    "profession": "الب"
+  },
+  {
+    "url_fn": "be7c674b-7_Yusuf Jasim Saleh Ay.jpg",
+    "safe_name": "stu_55.jpg",
+    "class": "سادس2",
+    "arabic_name": "يوسف جاسم صالح عياد",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "14ab605a-53ef-44eb-930a-07fb7153e5b6_Mohamed Shaker Isa A.jpeg",
+    "safe_name": "stu_56.jpeg",
+    "class": "سادس1",
+    "arabic_name": "محمد شاكر عيسى الخباز",
+    "profession": "لاعب كرة قدم في نادي برشلونة"
+  },
+  {
+    "url_fn": "IMG-20260531-WA0043_Adil Ali Izhar Ulhaq.jpg",
+    "safe_name": "stu_57.jpg",
+    "class": "سادس5",
+    "arabic_name": "عادل علي اظهار الحق دين محمد",
+    "profession": "مبرمج كمبيوتر"
+  },
+  {
+    "url_fn": "IMG-20260531-WA0046_Mohamed Abduljalil K.jpg",
+    "safe_name": "stu_58.jpg",
+    "class": "سادس2",
+    "arabic_name": "محمد عبدالجليل خليل علي",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "c060c067-77c2-40f3-a9e6-6b6fe4f65a77_Ali Mohamed Jaafar F.jpeg",
+    "safe_name": "stu_59.jpeg",
+    "class": "سادس1",
+    "arabic_name": "علي محمد جعفر فتر",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "online3_Mahdi Mohamed Merza.jpeg",
+    "safe_name": "stu_60.jpeg",
+    "class": "سادس5",
+    "arabic_name": "مهدي محمد ميرزا محمد",
+    "profession": "معلّم"
+  },
+  {
+    "url_fn": "IMG-20260531-WA0001_Mohammed Dawood Salm.jpg",
+    "safe_name": "stu_61.jpg",
+    "class": "سادس4",
+    "arabic_name": "محمد داود سلمان حسين",
+    "profession": "شرطي"
+  },
+  {
+    "url_fn": "badd0e02-dfe3-4e54-af21-6df207c274ea_Husain Ali Mohamed A.jpeg",
+    "safe_name": "stu_62.jpeg",
+    "class": "سادس3",
+    "arabic_name": "حسين علي محمد عطيه اسود",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "DSC_9530 copy_Mohammed Isa Abdulam.jpeg",
+    "safe_name": "stu_63.jpeg",
+    "class": "سادس4",
+    "arabic_name": "محمد عيسى عبدالامير موسى",
+    "profession": "Computer engineer"
+  },
+  {
+    "url_fn": "IMG-20250312-WA0033_Husain Hameed Jaafar.jpg",
+    "safe_name": "stu_64.jpg",
+    "class": "سادس3",
+    "arabic_name": "حسين حميد جعفر اسماعيل",
+    "profession": "مهندس كهربائي"
+  },
+  {
+    "url_fn": "IMG_٢٠٢٦٠٥٣١_١٤٥١١٦_Mahdi Mahmood Abdull.jpg",
+    "safe_name": "stu_65.jpg",
+    "class": "سادس3",
+    "arabic_name": "مهدي محمود عبدالله الزاكي",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "a3f6dedc-be3e-43a6-bd28-dcb2c049ee44_Ebrahim Mohamed Ebra.jpeg",
+    "safe_name": "stu_66.jpeg",
+    "class": "سادس4",
+    "arabic_name": "إبراهيم محمد ابراهيم علي",
+    "profession": "لاعب كرة قدم"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦٠٥٣١_١٥٢٠١٠_WhatsApp_Muntadhar Jaafar Abd.jpg",
+    "safe_name": "stu_67.jpg",
+    "class": "سادس5",
+    "arabic_name": "منتظر جعفر عبدالنبي يوسف",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "IMG_0015_Ali Ahmed Ali Alsaeg.jpeg",
+    "safe_name": "stu_68.jpeg",
+    "class": "سادس3",
+    "arabic_name": "علي احمد علي الصائغ",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "cpr_Haider Husain Merza.jpg",
+    "safe_name": "stu_69.jpg",
+    "class": "سادس3",
+    "arabic_name": "حيدر حسين ميرزا الزاكي",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "18561118-A5F0-4303-B0E1-F8C512AF9A70_Qassim Mohamed Jasim.jpeg",
+    "safe_name": "stu_70.jpeg",
+    "class": "سادس3",
+    "arabic_name": "قاسم محمد جاسم محمد",
+    "profession": "معلم"
+  },
+  {
+    "url_fn": "IMG_1651_Ahmed Ebrahim Salman.jpeg",
+    "safe_name": "stu_71.jpeg",
+    "class": "سادس3",
+    "arabic_name": "أحمد ابراهيم سلمان عمار",
+    "profession": "ممرض"
+  },
+  {
+    "url_fn": "Screenshot_٢٠٢٦-٠٥-٣٠-٢١-٤١-٥٩-٥٠٧_com.miui.g_Sayed Ahmed Aqeel Al.jpg",
+    "safe_name": "stu_72.jpg",
+    "class": "سادس4",
+    "arabic_name": "السيد أحمد عقيل علي سالم",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG-20260531-WA0043_Yusuf Mohsen Juma Ra.jpg",
+    "safe_name": "stu_73.jpg",
+    "class": "سادس5",
+    "arabic_name": "يوسف محسن جمعه رضي",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "IMG-20260601-WA0006_Sayed Hasan Ali Isa.jpg",
+    "safe_name": "stu_74.jpg",
+    "class": "سادس3",
+    "arabic_name": "السيد حسن علي عيسى شبر",
+    "profession": "معلم"
+  },
+  {
+    "url_fn": "beebf6fb-586c-4e87-96f5-dcb494909be3_Ahmed Hani Ahmed Mak.jpeg",
+    "safe_name": "stu_75.jpeg",
+    "class": "سادس4",
+    "arabic_name": "أحمد هاني احمد مكي",
+    "profession": "معلم"
+  },
+  {
+    "url_fn": "IMG_8118_Hussain Ali Mahmood.jpeg",
+    "safe_name": "stu_76.jpeg",
+    "class": "سادس4",
+    "arabic_name": "حسين علي محمود شعبان",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG-20260124-WA0039_Ali Taiseer Mahdi Al.jpg",
+    "safe_name": "stu_77.jpg",
+    "class": "سادس5",
+    "arabic_name": "علي تيسير مهدي العريبي",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "IMG-20260520-WA0003_Yaseen Abdali Mohame.jpg",
+    "safe_name": "stu_78.jpg",
+    "class": "سادس1",
+    "arabic_name": "ياسين عبدعلي محمد سلمان",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "file_00000000b12472468cabf3185baeb6fc_Nebras Yunis Saeed S.png",
+    "safe_name": "stu_79.png",
+    "class": "سادس3",
+    "arabic_name": "علي يونس سعيد سلمان",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "9ab337f9-f33a-43b5-8547-1a4e0a604786_Redha Ebrahim Radhi.jpeg",
+    "safe_name": "stu_80.jpeg",
+    "class": "سادس5",
+    "arabic_name": "رضا ابراهيم رضي سبت",
+    "profession": "دكتور"
+  },
+  {
+    "url_fn": "IMG-20260520-WA0021_Jassim Mohamed S. Su.jpg",
+    "safe_name": "stu_81.jpg",
+    "class": "سادس2",
+    "arabic_name": "جاسم محمد سعيد صديف",
+    "profession": "دكتور اسنان"
+  },
+  {
+    "url_fn": "IMG-20260520-WA0021_Jassim Mohamed S. Su 1.jpg",
+    "safe_name": "stu_82.jpg",
+    "class": "سادس2",
+    "arabic_name": "جاسم محمد سعيد صديف",
+    "profession": "دكتور اسنان"
+  },
+  {
+    "url_fn": "4236b704-6970-4546-8efe-fc7e9b4c800d_Ali Sadeq Saeed Alas.jpeg",
+    "safe_name": "stu_83.jpeg",
+    "class": "سادس4",
+    "arabic_name": "علي صادق سعيد العسكري",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "IMG-20260530-WA0013_Suad Salman Abdulhus 1.jpg",
+    "safe_name": "stu_84.jpg",
+    "class": "سادس4",
+    "arabic_name": "حسين سلمان عبدالحسين العصفور",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "IMG-20260602-WA0046(1)_Sayed Hasan Taher Sa.jpg",
+    "safe_name": "stu_85.jpg",
+    "class": "سادس4",
+    "arabic_name": "السيد حيدر طاهر سعيد شبر",
+    "profession": "استاذ رياضيات"
+  },
+  {
+    "url_fn": "IMG-20260602-WA0045(1)_Sayed Hasan Taher Sa.jpg",
+    "safe_name": "stu_86.jpg",
+    "class": "سادس4",
+    "arabic_name": "السيد حسن طاهر سعيد شبر",
+    "profession": "مهندس ميكانيكي"
+  },
+  {
+    "url_fn": "IMG-20260602-WA0001_Ali Taher Abdali Ahm.jpg",
+    "safe_name": "stu_87.jpg",
+    "class": "سادس3",
+    "arabic_name": "علي طاهر عبدعلي احمد",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG-20220425-WA0017_Ali Hasan Fardan Mas.jpg",
+    "safe_name": "stu_88.jpg",
+    "class": "سادس5",
+    "arabic_name": "مرتضى حسن فردان مشيمع",
+    "profession": "مهندس معماري و ديكور داخلي"
+  },
+  {
+    "url_fn": "e1260a7e-1096-40ac-a554-29e736404c88_Haider Ali Hasan Abb.jpeg",
+    "safe_name": "stu_89.jpeg",
+    "class": "سادس3",
+    "arabic_name": "حيدر علي حسن عباس",
+    "profession": "جندي (شرطي)"
+  },
+  {
+    "url_fn": "IMG_8999_Hussain Ali Mohamed.jpeg",
+    "safe_name": "stu_90.jpeg",
+    "class": "سادس4",
+    "arabic_name": "حسين علي محمد ابراهيم",
+    "profession": "مدير بنك قسم IT"
+  },
+  {
+    "url_fn": "3x4mm_Ahmed Ebrahim Melad.JPG",
+    "safe_name": "stu_91.JPG",
+    "class": "سادس3",
+    "arabic_name": "أحمد ابراهيم ميلاد محمد",
+    "profession": "مهندس معماري"
+  },
+  {
+    "url_fn": "ce2ea232-aee0-4a41-8635-f03445ed2ceb_Sayed Sajjad Adnan M.jpeg",
+    "safe_name": "stu_92.jpeg",
+    "class": "سادس1",
+    "arabic_name": "السيد سجاد عدنان محمد محمد",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "cpr online and pp_Sayed Hashem Mustafa.jpeg",
+    "safe_name": "stu_93.jpeg",
+    "class": "سادس3",
+    "arabic_name": "السيد هاشم مصطفى علي محسن",
+    "profession": "رجل أطفاء"
+  },
+  {
+    "url_fn": "3d5ae769-283a-4d8b-8279-938350141c46_Ali Isa Abdulla Almo.jpeg",
+    "safe_name": "stu_94.jpeg",
+    "class": "سادس1",
+    "arabic_name": "علي عيسى عبدالله الموالي",
+    "profession": "طيار"
+  },
+  {
+    "url_fn": "IMG-20260604-WA0000_Nebras Yunis Saeed S.jpg",
+    "safe_name": "stu_95.jpg",
+    "class": "سادس3",
+    "arabic_name": "علي يونس سعيد سلمان",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "IMG-20260604-WA0050_Hussain Mohamed Mahd.jpg",
+    "safe_name": "stu_96.jpg",
+    "class": "سادس3",
+    "arabic_name": "حسين محمد مهدي جواد",
+    "profession": "مهندس"
+  },
+  {
+    "url_fn": "544bfbf4-9689-4b22-802f-548a2ad072dd_ALI HASAN I. ALKHABB.jpeg",
+    "safe_name": "stu_97.jpeg",
+    "class": "سادس3",
+    "arabic_name": "علي حسن عيسى الخباز",
+    "profession": "دكتور أسنان"
+  },
+  {
+    "url_fn": "544bfbf4-9689-4b22-802f-548a2ad072dd_ALI HASAN I. ALKHABB 1.jpeg",
+    "safe_name": "stu_98.jpeg",
+    "class": "سادس3",
+    "arabic_name": "علي حسن عيسى الخباز",
+    "profession": "دكتور اسنان"
+  },
+  {
+    "url_fn": "IMG_4399_Hussain Mohamed Ghaz.jpeg",
+    "safe_name": "stu_99.jpeg",
+    "class": "سادس4",
+    "arabic_name": "حسين محمد غازي الحكيم",
+    "profession": "طبيب"
+  },
+  {
+    "url_fn": "d244b319-7f79-4500-9ad1-ba60a3186c06_Jaafar Sadeq Mohamed.jpeg",
+    "safe_name": "stu_100.jpeg",
+    "class": "سادس4",
+    "arabic_name": "جعفر صادق محمد جعفر العصفور",
+    "profession": "معلم"
+  },
+  {
+    "url_fn": "IMG-20260605-WA0041_Mohamed Fadhel Abbas.jpg",
+    "safe_name": "stu_101.jpg",
+    "class": "سادس3",
+    "arabic_name": "محمد فاضل عباس الخباز",
+    "profession": "صانع محتوى"
+  },
+  {
+    "url_fn": "IMG-20260605-WA0041_Mohamed Fadhel Abbas 1.jpg",
+    "safe_name": "stu_102.jpg",
+    "class": "سادس3",
+    "arabic_name": "محمد فاضل عباس الخباز",
+    "profession": "صانع محتوى"
+  },
+  {
+    "url_fn": "60031840-a21a-4b05-a875-0b5aa11b44a5_Ahmed Sadeq Ali Yusu.jpeg",
+    "safe_name": "stu_103.jpeg",
+    "class": "سادس2",
+    "arabic_name": "احمد صادق علي يوسف",
+    "profession": "مدرس رياضه"
+  },
+  {
+    "url_fn": "IMG-20260603-WA0076(1)_Ali Abduljalil Merza.jpg",
+    "safe_name": "stu_104.jpg",
+    "class": "سادس3",
+    "arabic_name": "علي عبدالجليل ميرزا احمد",
+    "profession": "رجل أعمال"
+  },
+  {
+    "url_fn": "inbound1820406482450753947_Sayed Husain Adnan A.jpg",
+    "safe_name": "stu_105.jpg",
+    "class": "سادس4",
+    "arabic_name": "سيد حسين عدنان علوي الخباز",
+    "profession": "اتمنى ان اصبح لاعب كرة قدم محترف"
+  }
+]
