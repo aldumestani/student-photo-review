@@ -1,17 +1,20 @@
+function doGet() {
+  var html = UrlFetchApp.fetch('https://aldumestani.github.io/student-photo-review/?v=' + new Date().getTime()).getContentText();
+  return HtmlService.createHtmlOutput(html).setTitle('مطابقة صور الطلبة').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     var teacher = data.teacher || "غير معروف";
     
-    // Ensure header row
     if (sheet.getLastRow() === 0) {
       sheet.appendRow(["التاريخ", "اسم المدرس", "رقم الصورة", "اسم الطالب", "الشعبة"]);
     }
     
-    // Delete old rows for this teacher
     var allData = sheet.getDataRange().getValues();
-    var rowsToKeep = [allData[0]]; // keep header
+    var rowsToKeep = [allData[0]];
     for (var i = 1; i < allData.length; i++) {
       if (allData[i][1] !== teacher) {
         rowsToKeep.push(allData[i]);
@@ -28,7 +31,6 @@ function doPost(e) {
       rowsToKeep.push([now, teacher, photo, name, cls]);
     }
     
-    // Clear and rewrite
     sheet.clear();
     if (rowsToKeep.length > 0) {
       sheet.getRange(1, 1, rowsToKeep.length, 5).setValues(rowsToKeep);
