@@ -6,8 +6,7 @@
 """
 
 import os, sys, json, shutil, threading, socket
-import requests
-from flask import Flask, render_template_string, send_from_directory, request, jsonify, Response
+from flask import Flask, render_template_string, send_from_directory, request, jsonify, Response, redirect
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STUDENTS_JSON = os.path.join(BASE_DIR, 'students_data.json')
@@ -78,17 +77,9 @@ def index():
     )
 
 def serve_image(name):
-    # Try Google Drive first
     if name in drive_images:
         file_id = drive_images[name]
-        url = f'https://drive.google.com/uc?export=view&id={file_id}'
-        try:
-            r = requests.get(url, timeout=10)
-            if r.status_code == 200:
-                return Response(r.content, mimetype=r.headers.get('Content-Type', 'image/jpeg'))
-        except:
-            pass
-    # Fallback to local
+        return redirect(f'https://lh3.googleusercontent.com/d/{file_id}')
     if os.path.exists(os.path.join(THUMBS_DIR, name)):
         return send_from_directory(THUMBS_DIR, name)
     return '', 404
