@@ -49,6 +49,14 @@ body{background:#000;font-family:Segoe UI,Tahoma,sans-serif;color:#fff;overflow:
 </head>
 <body>
 <div id="toast" class="toast"></div>
+<div id="teacherModal" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.95);z-index:1000;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px">
+  <div style="background:#1a1a2e;padding:30px;border-radius:14px;text-align:center;width:100%;max-width:350px">
+    <h3 style="margin-bottom:8px;font-size:1.3em">👤 اسم المدرس</h3>
+    <p style="font-size:.85em;color:#aaa;margin-bottom:18px">أدخل اسمك ليتم حفظ التطابقات باسمك</p>
+    <input id="teacherInput" type="text" placeholder="اكتب اسمك الثلاثي" style="width:100%;padding:14px;border:2px solid #8e44ad;border-radius:10px;font-size:1.1em;background:#111;color:#fff;text-align:center;margin-bottom:15px;outline:none" onkeydown="if(event.key==='Enter')setTeacherName()">
+    <button onclick="setTeacherName()" style="width:100%;padding:14px;background:#27ae60;color:#fff;border:none;border-radius:10px;font-size:1.1em;cursor:pointer;font-weight:bold">▶ بدء</button>
+  </div>
+</div>
 <div class="mobile-review" id="mobileReview">
   <div class="mr-img-wrap">
     <div class="mr-tap-left" onclick="navMobile(-1)"></div>
@@ -99,7 +107,8 @@ var syncStatus = document.getElementById("syncStatus");
 
 function imgURL(hq){return "https://lh3.googleusercontent.com/d/"+DATA.driveFiles[hq]+"=s0"}
 
-function ensureTeacher(){if(!teacherName){teacherName=localStorage.getItem("tm_teacher")||"";if(!teacherName){teacherName=prompt("اسم المدرس:","");if(teacherName)localStorage.setItem("tm_teacher",teacherName)}}}
+function setTeacherName(){var v=document.getElementById("teacherInput").value.trim();if(!v)return;teacherName=v;localStorage.setItem("tm_teacher",teacherName);document.getElementById("teacherModal").style.display="none";toast("👤 مرحباً "+teacherName);loadMatches();renderGrid();if(window.innerWidth<768||("ontouchstart"in window)){setTimeout(function(){if(PHOTOS.length>0)openMobileReview(0)},300)}}
+function ensureTeacher(){if(teacherName)return true;teacherName=localStorage.getItem("tm_teacher")||"";if(teacherName)return true;document.getElementById("teacherModal").style.display="flex";return false}
 function loadMatches(){try{var s=localStorage.getItem("teacher_matches");if(s)matches=JSON.parse(s)}catch(e){}}
 function saveLS(){try{localStorage.setItem("teacher_matches",JSON.stringify(matches))}catch(e){}}
 function toast(m){var t=document.getElementById("toast");t.textContent=m;t.style.display="block";setTimeout(function(){t.style.display="none"},2000)}
@@ -107,8 +116,8 @@ function getStudentClass(name){if(!name)return null;for(var c in DATA.classes){i
 var classList=Object.keys(DATA.classes).sort();
 classList.forEach(function(c){["mrClass","dgClass"].forEach(function(id){var o=document.createElement("option");o.value=c;o.textContent=c;document.getElementById(id).appendChild(o)})});
 function onMRClassChange(){var cls=document.getElementById("mrClass").value;var sel=document.getElementById("mrName");if(!cls){sel.innerHTML="<option value=\"\">-- اختر الصف أولاً --</option>";sel.disabled=true;return}sel.innerHTML="<option value=\"\">-- اختر اسم الطالب --</option>";DATA.classes[cls].forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;sel.appendChild(o)});sel.disabled=false;var hq=PHOTOS[mobileIdx];var current=matches[hq]||"";if(current&&getStudentClass(current)===cls)sel.value=current}
-function autoSync(){ensureTeacher();if(!GAS_URL)return;if(syncTimer)clearTimeout(syncTimer);syncTimer=setTimeout(function(){var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0)return;syncStatus.textContent="☁️";var x=new XMLHttpRequest();x.open("POST",GAS_URL,true);x.setRequestHeader("Content-Type","application/json");x.onload=function(){try{var r=JSON.parse(x.responseText);syncStatus.textContent=r.status==="ok"?"☁️✅":"☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}catch(e){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}};x.onerror=function(){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)};x.send(JSON.stringify({teacher:teacherName,matches:matches}))},2000)}
-function onMRNameChange(){var hq=PHOTOS[mobileIdx];var val=document.getElementById("mrName").value;if(val){matches[hq]=val;saveLS();autoSync();if(mobileIdx<PHOTOS.length-1){mobileIdx++;updateMobileReview()}else{toast("✅ تم الانتهاء من جميع الصور")}}else{delete matches[hq];saveLS();autoSync()}}
+function autoSync(){if(!ensureTeacher()||!GAS_URL)return;if(syncTimer)clearTimeout(syncTimer);syncTimer=setTimeout(function(){var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0)return;syncStatus.textContent="☁️";var x=new XMLHttpRequest();x.open("POST",GAS_URL,true);x.setRequestHeader("Content-Type","application/json");x.onload=function(){try{var r=JSON.parse(x.responseText);syncStatus.textContent=r.status==="ok"?"☁️✅":"☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}catch(e){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}};x.onerror=function(){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)};x.send(JSON.stringify({teacher:teacherName,matches:matches}))},2000)}
+function onMRNameChange(){var hq=PHOTOS[mobileIdx];var val=document.getElementById("mrName").value;if(val){matches[hq]=val}else{delete matches[hq]}saveLS();autoSync()}
 function updateMobileReview(){if(PHOTOS.length===0)return;if(mobileIdx<0)mobileIdx=0;if(mobileIdx>=PHOTOS.length)mobileIdx=PHOTOS.length-1;var hq=PHOTOS[mobileIdx];var existing=matches[hq]||"";var existingCls=getStudentClass(existing);var url=imgURL(hq);document.getElementById("mrImage").src=url;document.getElementById("mrCounter").textContent=(mobileIdx+1)+" / "+PHOTOS.length;var mrClass=document.getElementById("mrClass");var mrName=document.getElementById("mrName");if(existingCls){mrClass.value=existingCls;onMRClassChange();mrName.value=existing}else{mrClass.value="";onMRClassChange()}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;document.getElementById("mrInfo").textContent=(existing?"✅ "+existing:"⚠️ بدون اسم")+" | تم "+total+"/"+PHOTOS.length}
 
 function navMobile(d){var ni=mobileIdx+d;if(ni>=0&&ni<PHOTOS.length){mobileIdx=ni;updateMobileReview()}}
@@ -116,13 +125,12 @@ function openMobileReview(idx){mobileIdx=idx||0;updateMobileReview();document.ge
 function closeMobileReview(){document.getElementById("mobileReview").style.display="none"}
 function renderGrid(){var filter=document.getElementById("dgClass").value;var grid=document.getElementById("photoGrid");var html="";var count=0;PHOTOS.forEach(function(hq,idx){var existing=matches[hq]||"";if(filter&&getStudentClass(existing)!==filter)return;count++;var url=imgURL(hq);html+="<div class=\"photo-card "+(existing?"matched":"unmatched")+"\"><img class=\"thumb\" src=\""+url+"\" onclick=\"openMobileReview("+idx+")\"><div class=\"card-body\"><div class=\"fn\">"+hq+"</div><div class=\"nm\">"+(existing||"⚠️ بدون اسم")+"</div></div></div>"});grid.innerHTML=html;document.getElementById("dgStats").textContent=count+" صورة"}
 document.addEventListener("keydown",function(e){if(document.getElementById("mobileReview").style.display==="flex"){if(e.key==="Escape")closeMobileReview();if(e.key==="ArrowRight")navMobile(1);if(e.key==="ArrowLeft")navMobile(-1)}})
-if(window.innerWidth<768||("ontouchstart"in window)){setTimeout(function(){if(PHOTOS.length>0)openMobileReview(0)},300)}
 function exportMatches(){var blob=new Blob([JSON.stringify(matches,null,2)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="matches.json";a.click();toast("📥 تم التصدير")}
 function importMatches(e){var file=e.target.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(ev){try{var data=JSON.parse(ev.target.result);matches=data;saveLS();renderGrid();if(document.getElementById("mobileReview").style.display==="flex")updateMobileReview();toast("📤 تم الاستيراد")}catch(err){toast("❌ خطأ في الملف")}};reader.readAsText(file);e.target.value=""}
-function syncToServer(){ensureTeacher();if(!GAS_URL){toast("❌ لم يتم تعيين رابط GAS");return}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0){toast("⚠️ لا توجد تطابقات للرفع");return}syncStatus.textContent="☁️🔄";var x=new XMLHttpRequest();x.open("POST",GAS_URL,true);x.setRequestHeader("Content-Type","application/json");x.onload=function(){try{var r=JSON.parse(x.responseText);if(r.status==="ok"){syncStatus.textContent="☁️✅";toast("✅ تم رفع "+r.count+" تطابق")}else{syncStatus.textContent="☁️❌";toast("❌ "+r.message)}}catch(e){syncStatus.textContent="☁️❌";toast("❌ خطأ في الاستجابة")}};x.onerror=function(){syncStatus.textContent="☁️❌";toast("❌ فشل الاتصال")};x.send(JSON.stringify({teacher:teacherName,matches:matches}));setTimeout(function(){syncStatus.textContent=""},4000)}
+function syncToServer(){if(!ensureTeacher())return;if(!GAS_URL){toast("❌ لم يتم تعيين رابط التخزين السحابي");return}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0){toast("⚠️ لا توجد تطابقات للرفع");return}syncStatus.textContent="☁️🔄";var x=new XMLHttpRequest();x.open("POST",GAS_URL,true);x.setRequestHeader("Content-Type","application/json");x.onload=function(){try{var r=JSON.parse(x.responseText);if(r.status==="ok"){syncStatus.textContent="☁️✅";toast("✅ تم رفع "+r.count+" تطابق")}else{syncStatus.textContent="☁️❌";toast("❌ "+r.message)}}catch(e){syncStatus.textContent="☁️❌";toast("❌ خطأ في الاستجابة")}};x.onerror=function(){syncStatus.textContent="☁️❌";toast("❌ فشل الاتصال")};x.send(JSON.stringify({teacher:teacherName,matches:matches}));setTimeout(function(){syncStatus.textContent=""},4000)}
 loadMatches();
 renderGrid();
-ensureTeacher();
+if(ensureTeacher()&&(window.innerWidth<768||("ontouchstart"in window))){setTimeout(function(){if(PHOTOS.length>0)openMobileReview(0)},100)}
 </script>
 </body>
 </html>
