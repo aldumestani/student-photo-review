@@ -44,7 +44,7 @@ body{background:#000;font-family:Segoe UI,Tahoma,sans-serif;color:#fff;overflow:
 .photo-card.matched .card-body .nm{color:#4CAF50}
 .photo-card.unmatched .card-body .nm{color:#e74c3c}
 .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#27ae60;color:#fff;padding:10px 20px;border-radius:8px;display:none;z-index:999;font-size:.9em;text-align:center}
-@media(min-width:768px){.mobile-review{display:none!important}.desktop-grid{display:block}}
+@media(min-width:768px){.mobile-review{display:none}.desktop-grid{display:block}}
 </style>
 </head>
 <body>
@@ -57,7 +57,7 @@ body{background:#000;font-family:Segoe UI,Tahoma,sans-serif;color:#fff;overflow:
     <button onclick="setTeacherName()" style="width:100%;padding:14px;background:#27ae60;color:#fff;border:none;border-radius:10px;font-size:1.1em;cursor:pointer;font-weight:bold">▶ بدء</button>
   </div>
 </div>
-<div class="mobile-review" id="mobileReview">
+<div class="mobile-review" id="mobileReview" style="display:none">
   <div class="mr-img-wrap">
     <div class="mr-tap-left" onclick="navMobile(-1)"></div>
     <div class="mr-tap-right" onclick="navMobile(1)"></div>
