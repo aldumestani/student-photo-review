@@ -1,0 +1,2 @@
+# Disable all filters (including LFS) for all files
+* -filter
