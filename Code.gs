@@ -5,7 +5,17 @@ function doGet() {
 
 function doPost(e) {
   try {
-    var raw = e.postData ? e.postData.contents : (e.parameter && e.parameter.payload ? e.parameter.payload : '{}');
+    var raw = '';
+    if (e.parameter && e.parameter.payload) {
+      raw = e.parameter.payload;
+    } else if (e.postData && e.postData.contents) {
+      var c = e.postData.contents;
+      if (c.indexOf('payload=') === 0) {
+        raw = decodeURIComponent(c.substring(8));
+      } else {
+        raw = c;
+      }
+    }
     var data = JSON.parse(raw);
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     var teacher = data.teacher || "غير معروف";
