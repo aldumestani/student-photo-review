@@ -96,7 +96,7 @@ var PHOTOS = DATA.photoList;
 // ضع رابط Google Apps Script هنا (للوصول المباشر من GitHub Pages)
 var GAS_URL = window.location.hostname.indexOf('google.com')>=0||window.location.hostname.indexOf('script.google.com')>=0
   ? window.location.protocol+'//'+window.location.host+window.location.pathname
-  : "https://script.google.com/macros/s/AKfycbz9Xa8gs8Rq-HAHW4KLrEQrr0q-PtMUGEkFFzFNeWhubHekrs7jDSuLLz9tCtBpLHju/exec";
+  : "https://script.google.com/macros/s/AKfycby52CqGZxQ_ENv0N-OkNAwCsKJh4UC8_qFubfdW_HEEgJgGqRpcpCHOvsbdDEDv1vlO/exec";
 
 var matches = {};
 var mobileIdx = 0;
@@ -128,6 +128,7 @@ document.addEventListener("keydown",function(e){if(document.getElementById("mobi
 function exportMatches(){var blob=new Blob([JSON.stringify(matches,null,2)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="matches.json";a.click();toast("📥 تم التصدير")}
 function importMatches(e){var file=e.target.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(ev){try{var data=JSON.parse(ev.target.result);matches=data;saveLS();renderGrid();if(document.getElementById("mobileReview").style.display==="flex")updateMobileReview();toast("📤 تم الاستيراد")}catch(err){toast("❌ خطأ في الملف")}};reader.readAsText(file);e.target.value=""}
 function syncToServer(){if(!ensureTeacher())return;if(!GAS_URL){toast("❌ لم يتم تعيين رابط التخزين السحابي");return}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0){toast("⚠️ لا توجد تطابقات للرفع");return}doSync(GAS_URL);toast("☁️ جاري الرفع...")}
+</script>
 <iframe id="gasFrame" name="gasFrame" style="display:none"></iframe>
 <form id="gasForm" action="" method="POST" target="gasFrame" style="display:none"><input type="hidden" id="gasPayload" name="payload"></form>
 <script>
