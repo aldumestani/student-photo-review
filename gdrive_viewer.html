@@ -8,25 +8,22 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;font-family:Segoe UI,Tahoma,sans-serif;color:#fff;overflow:hidden;height:100dvh;display:flex;flex-direction:column}
 .mobile-review{display:flex;flex-direction:column;height:100dvh;width:100%;position:fixed;top:0;left:0;z-index:100;background:#000}
-.mr-img-wrap{flex:1;display:flex;align-items:center;justify-content:center;background:#000;overflow:hidden;position:relative}
+.mr-img-wrap{flex:1;display:flex;align-items:center;justify-content:center;background:#000;overflow:hidden;position:relative;min-height:0}
 .mr-img-wrap img{width:100%;height:100%;object-fit:contain}
-.mr-tap-left,.mr-tap-right{position:absolute;top:0;bottom:80px;width:40%;z-index:2}
+.mr-tap-left,.mr-tap-right{position:absolute;top:0;bottom:0;width:40%;z-index:2}
 .mr-tap-left{left:0}
 .mr-tap-right{right:0}
 .mr-top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent);z-index:3}
-.mr-top button{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.2em;cursor:pointer;padding:6px 12px;border-radius:20px}
+.mr-top button{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1em;cursor:pointer;padding:6px 12px;border-radius:20px}
 .mr-top .mr-counter{color:#fff;font-size:.8em;background:rgba(0,0,0,.5);padding:4px 10px;border-radius:10px}
-.mr-bottom{background:rgba(20,20,35,.97);padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom,10px));z-index:3}
-.mr-bottom select{width:100%;padding:12px;border:2px solid #8e44ad;border-radius:10px;font-size:1em;background:#1a1a2e;color:#fff;-webkit-appearance:none;appearance:none}
-.mr-bottom select option{background:#1a1a2e;color:#fff}
-.mr-bottom select:disabled{border-color:#555;opacity:.6}
-.mr-bottom .mr-class-row{margin-bottom:6px}
-.mr-bottom .mr-save-row{display:flex;gap:8px;margin-top:6px}
-.mr-bottom .mr-save-row button{flex:1;padding:12px;border:none;border-radius:10px;font-size:1em;cursor:pointer;font-weight:bold}
-.mr-bottom .btn-save{background:#27ae60;color:#fff}
-.mr-bottom .btn-save:disabled{background:#555;color:#888;cursor:default}
-.mr-bottom .btn-nav{background:#555;color:#fff}
-.mr-bottom .mr-info{text-align:center;font-size:.75em;color:#888;margin-top:4px}
+.mr-bottom{background:#1a1a2e;padding:14px 12px;padding-bottom:max(14px,env(safe-area-inset-bottom,14px));border-top:2px solid #333;flex-shrink:0}
+.mr-bottom select{width:100%;padding:14px;border:2px solid #8e44ad;border-radius:10px;font-size:1em;background:#111;color:#fff;-webkit-appearance:none;appearance:none;margin-bottom:10px}
+.mr-bottom select:last-of-type{margin-bottom:0}
+.mr-bottom select:disabled{opacity:.4}
+.mr-bottom .mr-nav-row{display:flex;gap:8px;margin-top:10px}
+.mr-bottom .mr-nav-row button{flex:1;padding:12px;border:2px solid #555;border-radius:10px;font-size:1em;cursor:pointer;font-weight:bold;background:#111;color:#fff}
+.mr-bottom .mr-info{text-align:center;font-size:.8em;color:#888;margin-top:8px;padding:6px}
+.mr-bottom .mr-hint{text-align:center;font-size:.8em;color:#e74c3c;margin-bottom:8px}
 .desktop-grid{display:none;padding:15px;overflow-y:auto;height:100vh;background:#111}
 .dg-top{display:flex;gap:10px;align-items:center;margin-bottom:15px;flex-wrap:wrap}
 .dg-top select{padding:8px 12px;border:2px solid #555;border-radius:8px;font-size:.9em;background:#1a1a2e;color:#fff}
@@ -70,13 +67,12 @@ body{background:#000;font-family:Segoe UI,Tahoma,sans-serif;color:#fff;overflow:
     </div>
   </div>
   <div class="mr-bottom">
-    <div class="mr-class-row">
-      <select id="mrClass" onchange="onMRClassChange()"><option value="">-- اختر الصف --</option></select>
-    </div>
-    <select id="mrName" onchange="onMRNameChange()" disabled><option value="">-- اختر الصف أولاً --</option></select>
-    <div class="mr-save-row">
-      <button class="btn-nav" onclick="navMobile(-1)">←</button>
-      <button class="btn-nav" onclick="navMobile(1)">→</button>
+    <div class="mr-hint" id="mrHint">⬇ اختر الشعبة واسم الطالب لهذه الصورة</div>
+    <select id="mrClass" onchange="onMRClassChange()"><option value="">-- اختر الشعبة --</option></select>
+    <select id="mrName" onchange="onMRNameChange()" disabled><option value="">-- اختر الشعبة أولاً --</option></select>
+    <div class="mr-nav-row">
+      <button onclick="navMobile(-1)">← السابق</button>
+      <button onclick="navMobile(1)">التالي →</button>
     </div>
     <div class="mr-info" id="mrInfo"></div>
   </div>
@@ -107,7 +103,7 @@ var syncStatus = document.getElementById("syncStatus");
 
 function imgURL(hq){return "https://lh3.googleusercontent.com/d/"+DATA.driveFiles[hq]+"=s0"}
 
-function setTeacherName(){var v=document.getElementById("teacherInput").value.trim();if(!v)return;teacherName=v;localStorage.setItem("tm_teacher",teacherName);document.getElementById("teacherModal").style.display="none";toast("👤 مرحباً "+teacherName);loadMatches();renderGrid();if(window.innerWidth<768||("ontouchstart"in window)){setTimeout(function(){if(PHOTOS.length>0)openMobileReview(0)},300)}}
+function setTeacherName(){var v=document.getElementById("teacherInput").value.trim();if(!v)return;teacherName=v;localStorage.setItem("tm_teacher",teacherName);document.getElementById("teacherModal").style.display="none";toast("👤 مرحباً "+teacherName);loadMatches();renderGrid();if(PHOTOS.length>0)openMobileReview(0)}
 function ensureTeacher(){if(teacherName)return true;teacherName=localStorage.getItem("tm_teacher")||"";if(teacherName)return true;document.getElementById("teacherModal").style.display="flex";return false}
 function loadMatches(){try{var s=localStorage.getItem("teacher_matches");if(s)matches=JSON.parse(s)}catch(e){}}
 function saveLS(){try{localStorage.setItem("teacher_matches",JSON.stringify(matches))}catch(e){}}
@@ -115,10 +111,10 @@ function toast(m){var t=document.getElementById("toast");t.textContent=m;t.style
 function getStudentClass(name){if(!name)return null;for(var c in DATA.classes){if(DATA.classes[c].indexOf(name)>=0)return c}return null}
 var classList=Object.keys(DATA.classes).sort();
 classList.forEach(function(c){["mrClass","dgClass"].forEach(function(id){var o=document.createElement("option");o.value=c;o.textContent=c;document.getElementById(id).appendChild(o)})});
-function onMRClassChange(){var cls=document.getElementById("mrClass").value;var sel=document.getElementById("mrName");if(!cls){sel.innerHTML="<option value=\"\">-- اختر الصف أولاً --</option>";sel.disabled=true;return}sel.innerHTML="<option value=\"\">-- اختر اسم الطالب --</option>";DATA.classes[cls].forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;sel.appendChild(o)});sel.disabled=false;var hq=PHOTOS[mobileIdx];var current=matches[hq]||"";if(current&&getStudentClass(current)===cls)sel.value=current}
+function onMRClassChange(){var cls=document.getElementById("mrClass").value;var sel=document.getElementById("mrName");if(!cls){sel.innerHTML="<option value=\"\">-- اختر الشعبة أولاً --</option>";sel.disabled=true;document.getElementById("mrHint").textContent="⬇ اختر الشعبة أولاً";return}sel.innerHTML="<option value=\"\">-- اختر اسم الطالب --</option>";DATA.classes[cls].forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;sel.appendChild(o)});sel.disabled=false;document.getElementById("mrHint").textContent="⬇ الآن اختر اسم الطالب من القائمة";var hq=PHOTOS[mobileIdx];var current=matches[hq]||"";if(current&&getStudentClass(current)===cls)sel.value=current}
 function autoSync(){if(!ensureTeacher()||!GAS_URL)return;if(syncTimer)clearTimeout(syncTimer);syncTimer=setTimeout(function(){var total=Object.keys(matches).filter(function(k){return matches[k]}).length;if(total===0)return;syncStatus.textContent="☁️";var x=new XMLHttpRequest();x.open("POST",GAS_URL,true);x.setRequestHeader("Content-Type","application/json");x.onload=function(){try{var r=JSON.parse(x.responseText);syncStatus.textContent=r.status==="ok"?"☁️✅":"☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}catch(e){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)}};x.onerror=function(){syncStatus.textContent="☁️❌";setTimeout(function(){syncStatus.textContent=""},3000)};x.send(JSON.stringify({teacher:teacherName,matches:matches}))},2000)}
-function onMRNameChange(){var hq=PHOTOS[mobileIdx];var val=document.getElementById("mrName").value;if(val){matches[hq]=val}else{delete matches[hq]}saveLS();autoSync()}
-function updateMobileReview(){if(PHOTOS.length===0)return;if(mobileIdx<0)mobileIdx=0;if(mobileIdx>=PHOTOS.length)mobileIdx=PHOTOS.length-1;var hq=PHOTOS[mobileIdx];var existing=matches[hq]||"";var existingCls=getStudentClass(existing);var url=imgURL(hq);document.getElementById("mrImage").src=url;document.getElementById("mrCounter").textContent=(mobileIdx+1)+" / "+PHOTOS.length;var mrClass=document.getElementById("mrClass");var mrName=document.getElementById("mrName");if(existingCls){mrClass.value=existingCls;onMRClassChange();mrName.value=existing}else{mrClass.value="";onMRClassChange()}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;document.getElementById("mrInfo").textContent=(existing?"✅ "+existing:"⚠️ بدون اسم")+" | تم "+total+"/"+PHOTOS.length}
+function onMRNameChange(){var hq=PHOTOS[mobileIdx];var val=document.getElementById("mrName").value;if(val){matches[hq]=val;document.getElementById("mrHint").textContent="✅ تم:"+val}else{delete matches[hq];document.getElementById("mrHint").textContent="⬇ اختر الشعبة واسم الطالب"}saveLS();autoSync()}
+function updateMobileReview(){if(PHOTOS.length===0)return;if(mobileIdx<0)mobileIdx=0;if(mobileIdx>=PHOTOS.length)mobileIdx=PHOTOS.length-1;var hq=PHOTOS[mobileIdx];var existing=matches[hq]||"";var existingCls=getStudentClass(existing);var url=imgURL(hq);document.getElementById("mrImage").src=url;document.getElementById("mrCounter").textContent=(mobileIdx+1)+" / "+PHOTOS.length;var mrClass=document.getElementById("mrClass");var mrName=document.getElementById("mrName");var hint=document.getElementById("mrHint");if(existingCls){mrClass.value=existingCls;onMRClassChange();mrName.value=existing;hint.textContent="✅ تم:"+existing}else{mrClass.value="";onMRClassChange();hint.textContent="⬇ اختر الشعبة واسم الطالب لهذه الصورة"}var total=Object.keys(matches).filter(function(k){return matches[k]}).length;document.getElementById("mrInfo").textContent="تم "+total+"/"+PHOTOS.length}
 
 function navMobile(d){var ni=mobileIdx+d;if(ni>=0&&ni<PHOTOS.length){mobileIdx=ni;updateMobileReview()}}
 function openMobileReview(idx){mobileIdx=idx||0;updateMobileReview();document.getElementById("mobileReview").style.display="flex"}
